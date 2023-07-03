@@ -7,36 +7,36 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class EscribirJson {
-    static void escribirJsonPlanet(ArrayList<Planet> listaPlanets)
+    static void escribirJsonPokemon(ArrayList<Pokemon> listaPokemons)
     {
 
         Gson gson = new Gson();
 
-        try (FileWriter writer = new FileWriter("Planets.json")) {
-            gson.toJson(listaPlanets, writer);
+        try (FileWriter writer = new FileWriter("Pokemons.json")) {
+            gson.toJson(listaPokemons, writer);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    static void escribirJsonPeticiones(ArrayList<Param> listaParams)
+    static void escribirJsonPeticiones(ArrayList<Parametro> listaParams)
     {
         Gson gson = new Gson();
 
-        try (FileWriter writer = new FileWriter("Petitions.json")) {
+        try (FileWriter writer = new FileWriter("Peticiones.json")) {
             gson.toJson(listaParams, writer);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    static void escribirJsonStarship(ArrayList<Starship> listaStarship)
+    static void escribirJsonTipos(ArrayList<Tipo> listaTipos)
     {
 
         Gson gson = new Gson();
 
-        try (FileWriter writer = new FileWriter("Starships.json")) {
-            gson.toJson(listaStarship, writer);
+        try (FileWriter writer = new FileWriter("Tipos.json")) {
+            gson.toJson(listaTipos, writer);
         } catch (IOException e) {
             e.printStackTrace();
         }
