@@ -34,30 +34,30 @@ public class Controller {
     {
         //Hecho
         ArrayList<Pokemon> listaPlanets = reader.LeerFicheroPokemons("Pokemons.json");
-        ArrayList<Param> listaPeticiones = reader.LeerFicheroPeticiones("Petitions.json");
-        ArrayList<Starship> listaStarships = reader.LeerFicheroStarships("Starships.json");
+        ArrayList<Parametro> listaPeticiones = reader.LeerFicheroPeticiones("Peticiones.json");
+        ArrayList<Tipo> listaStarships = reader.LeerFicheroTipos("Tipos.json");
 
-        if(objeto1.getParameter1().equals("starships"))
+        if(objeto1.getParameter1().equals("type"))
         {
-            Starship starship = new Starship();
-            starship = data.obtenerStarships(objeto1);
-            listaStarships.add(starship);
-            writter.escribirJsonStarship(listaStarships);
+            Tipo tipo = new Tipo();
+            tipo = data.obtenerStarships(objeto1);
+            listaStarships.add(tipo);
+            writter.escribirJsonTipos(listaStarships);
 
         }
         else
         {
-            Planet planeta = new Planet();
-            planeta = data.obtenerPlanets(objeto1);
-            listaPlanets.add(planeta);
-            writter.escribirJsonPlanet(listaPlanets);
+            Pokemon pokemon = new Pokemon();
+            pokemon = data.obtenerPlanets(objeto1);
+            listaPlanets.add(pokemon);
+            writter.escribirJsonPokemon(listaPlanets);
 
         }
 
         listaPeticiones.add(objeto1);
         writter.escribirJsonPeticiones(listaPeticiones);
     }
-
+/*
     @DeleteMapping("/Borrar{parameter1}{parameter2}")
     public ArrayList<Param> borrarParam(@RequestParam String parameter1,@RequestParam int parameter2 )
     {
@@ -67,5 +67,5 @@ public class Controller {
 
         return lista;
 
-    }
+    } */
 }
