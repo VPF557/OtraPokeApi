@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class DataHanding {
 
-    private final static String url = "https://swapi.dev/api/%s/%s";
+    private final static String url = "https://pokeapi.co/api/v2/%s/%s";
     //Peticiones 
     public Pokemon obtenerPokemons(Parametro params)
     {
@@ -50,10 +50,10 @@ public class DataHanding {
         return pokemon;
     }
 
-    public Starship obtenerStarships(Param params)
+    public Tipo obtenerTipos(Parametro params)
     {
 
-        Starship starship = null;
+        Tipo tipo = null;
 
         String peopleUrl = String.format(url, params.getParameter1(), params.getParameter2());
 
@@ -71,7 +71,7 @@ public class DataHanding {
             String jsonData = response.body();
 
             Gson gson = new Gson();
-            starship = gson.fromJson(jsonData, Starship.class);
+            tipo = gson.fromJson(jsonData, Tipo.class);
 
         } catch (URISyntaxException e) {
             System.out.println("Error al crear la request: " + e.getMessage());
@@ -83,13 +83,13 @@ public class DataHanding {
         }
 
 
-        return starship;
+        return tipo;
     }
 
-    public ArrayList<Param> buscarObjeto(String param1,int param2, String ruta) {
+    public ArrayList<Parametro> buscarObjeto(String param1,int param2, String ruta) {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
-        ArrayList<Param> listaAux = reader.LeerFicheroPeticiones(ruta);
+        ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
         for (int i = 0; i < listaAux.size(); i++) {
             if (listaAux.get(i).getParameter1().equals(param1) && listaAux.get(i).getParameter2() == param2)
             {

@@ -40,7 +40,7 @@ public class Controller {
         if(objeto1.getParameter1().equals("type"))
         {
             Tipo tipo = new Tipo();
-            tipo = data.obtenerStarships(objeto1);
+            tipo = data.obtenerTipos(objeto1);
             listaStarships.add(tipo);
             writter.escribirJsonTipos(listaStarships);
 
@@ -48,7 +48,7 @@ public class Controller {
         else
         {
             Pokemon pokemon = new Pokemon();
-            pokemon = data.obtenerPlanets(objeto1);
+            pokemon = data.obtenerPokemons(objeto1);
             listaPlanets.add(pokemon);
             writter.escribirJsonPokemon(listaPlanets);
 
