@@ -39,8 +39,8 @@ public class LeerJson
         return listaJson;
     }
 
-    public static ArrayList<Param> LeerFicheroPeticiones(String ruta){
-        ArrayList<Param> listaJson = new ArrayList<>();
+    public static ArrayList<Parametro> LeerFicheroPeticiones(String ruta){
+        ArrayList<Parametro> listaJson = new ArrayList<>();
 //d
         try {
             //Creamos el objeto Gson
@@ -53,7 +53,7 @@ public class LeerJson
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            listaJson = new Gson().fromJson(reader, new TypeToken<ArrayList<Param>>() {}.getType());
+            listaJson = new Gson().fromJson(reader, new TypeToken<ArrayList<Parametro>>() {}.getType());
             //Cerramos el reader
             try {
                 reader.close();
@@ -67,8 +67,8 @@ public class LeerJson
         return listaJson;
     }
 
-    public static ArrayList<Starship> LeerFicheroStarships(String ruta){
-        ArrayList<Starship> listaJson = new ArrayList<>();
+    public static ArrayList<Tipo> LeerFicheroTipos(String ruta){
+        ArrayList<Tipo> listaJson = new ArrayList<>();
 
         try {
             //Creamos el objeto Gson
@@ -81,7 +81,7 @@ public class LeerJson
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            listaJson = new Gson().fromJson(reader, new TypeToken<ArrayList<Starship>>() {}.getType());
+            listaJson = new Gson().fromJson(reader, new TypeToken<ArrayList<Tipo>>() {}.getType());
             //Cerramos el reader
             try {
                 reader.close();
