@@ -16,7 +16,7 @@ public class Controller {
     {
         //Leemos el reason e introducimos los elementos en un arraylist
         ArrayList<Parametro> listaPeticiones = reader.LeerFicheroPeticiones("Peticiones.json");
-        //Mostramos los elementos leidos
+        //Mostramos los elementos leido
         return listaPeticiones;
     }
 
