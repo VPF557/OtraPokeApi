@@ -8,12 +8,12 @@ public class Parametro
     @JsonProperty
     private String parameter1;
     @JsonProperty
-    private int parameter2;
+    private String parameter2;
 
     public Parametro() {
     }
 
-    public Parametro(String parameter1, int parameter2) {
+    public Parametro(String parameter1, String parameter2) {
         this.parameter1 = parameter1;
         this.parameter2 = parameter2;
     }
@@ -26,11 +26,11 @@ public class Parametro
         this.parameter1 = parameter1;
     }
 
-    public int getParameter2() {
+    public String getParameter2() {
         return parameter2;
     }
 
-    public void setParameter2(int parameter2) {
+    public void setParameter2(String parameter2) {
         this.parameter2 = parameter2;
     }
 
