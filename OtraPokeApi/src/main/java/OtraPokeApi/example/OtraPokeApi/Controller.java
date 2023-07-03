@@ -11,24 +11,24 @@ public class Controller {
     DataHanding data = new DataHanding();
     EscribirJson writter = new EscribirJson();
 
-/*    @GetMapping("/registro")
-    public ArrayList<Param> listaObjeto1()
+    @GetMapping("/registro")
+    public ArrayList<Parametro> listaObjeto1()
     {
         //Leemos el reason e introducimos los elementos en un arraylist
-        ArrayList<Param> listaPeticiones = reader.LeerFicheroPeticiones("Petitions.json");
+        ArrayList<Parametro> listaPeticiones = reader.LeerFicheroPeticiones("Peticiones.json");
         //Mostramos los elementos leidos
         return listaPeticiones;
     }
 
     @GetMapping("/registroP")
-    public ArrayList<Planet> listaPlanets()
+    public ArrayList<Pokemon> listaPlanets()
     {
         //Leemos el reason e introducimos los elementos en un arraylist
-        ArrayList<Planet> listaPlanets = reader.LeerFicheroPlanets("Planets.json");
+        ArrayList<Pokemon> listaPlanets = reader.LeerFicheroPokemons("Pokemons.json");
         //Mostramos los elementos leidos
         return listaPlanets;
     }
-*/
+
     @PostMapping("/peticion")
     public void mandarElemento(@RequestBody Parametro objeto1)
     {
