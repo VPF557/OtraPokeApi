@@ -86,7 +86,7 @@ public class DataHanding {
         return tipo;
     }
 
-    public ArrayList<Parametro> buscarObjeto(String param1,int param2, String ruta) {
+    /*public ArrayList<Parametro> buscarObjeto(String param1,int param2, String ruta) {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
         ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
@@ -97,6 +97,6 @@ public class DataHanding {
             }
         }
         return listaAux;
-    }
+    } */
 
 }

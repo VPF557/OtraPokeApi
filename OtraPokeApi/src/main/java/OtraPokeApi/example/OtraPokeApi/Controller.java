@@ -35,14 +35,14 @@ public class Controller {
         //Hecho
         ArrayList<Pokemon> listaPlanets = reader.LeerFicheroPokemons("Pokemons.json");
         ArrayList<Parametro> listaPeticiones = reader.LeerFicheroPeticiones("Peticiones.json");
-        ArrayList<Tipo> listaStarships = reader.LeerFicheroTipos("Tipos.json");
+        ArrayList<Tipo> listaTipos = reader.LeerFicheroTipos("Tipos.json");
 
         if(objeto1.getParameter1().equals("type"))
         {
             Tipo tipo = new Tipo();
             tipo = data.obtenerTipos(objeto1);
-            listaStarships.add(tipo);
-            writter.escribirJsonTipos(listaStarships);
+            listaTipos.add(tipo);
+            writter.escribirJsonTipos(listaTipos);
 
         }
         else
