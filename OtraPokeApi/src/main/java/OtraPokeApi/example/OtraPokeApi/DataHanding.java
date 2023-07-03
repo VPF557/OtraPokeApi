@@ -86,17 +86,17 @@ public class DataHanding {
         return tipo;
     }
 
-    /*public ArrayList<Parametro> buscarObjeto(String param1,int param2, String ruta) {
+    public ArrayList<Parametro> buscarObjeto(String param1,String param2, String ruta) {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
         ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
         for (int i = 0; i < listaAux.size(); i++) {
-            if (listaAux.get(i).getParameter1().equals(param1) && listaAux.get(i).getParameter2() == param2)
+            if (listaAux.get(i).getParameter1().equals(param1) && listaAux.get(i).getParameter2().equals(param2))
             {
                 listaAux.remove(i);
             }
         }
         return listaAux;
-    } */
+    }
 
 }
